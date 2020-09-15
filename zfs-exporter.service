@@ -1,1 +1,11 @@
-/etc/systemd/system/zfs-exporter.service
+[Unit]
+Description=ZFS Exporter for Prometheus
+
+[Service]
+ExecStart=/usr/bin/python3 /home/ozap/zfs_exporter/zfs_exporter.py
+Environment=PYTHONBUFFERED=1
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
+
