@@ -1,5 +1,10 @@
 #!/usr/bin/python3
 
+
+#### ZFS Exporter ####
+#### (C) 2020 Leidos.  All rights reserved. 
+#### Contact Information: Leidos_CSS_IRAD@leidos.com
+
 from typing import Callable
 from prometheus_client import start_http_server, Gauge
 from zpool_parser import get_zpool_status, ZPoolState, DriveStatus, SubpoolType, SubpoolStatus, ZPoolStatus
